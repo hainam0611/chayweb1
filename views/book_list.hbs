@@ -1,0 +1,31 @@
+<div class="container text-center mt-3 mb-3">
+<table class="table table -primary">
+    <tr>
+        <th colspan="7" class="h1 text text-danger">Book List</th>
+    </tr>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Date</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Image</th>
+        <th>Video</th>
+    </tr>
+    {{#each books }}
+        <tr>
+        <th>{{title}}</th>
+        <th>{{author}}</th>
+        <th>{{{ dateFormat date "DD/MM/YYYY" }}}</th>
+        <th>{{price}}$</th>
+        <th>{{quantity}}</th>
+        <th>
+            <img src="{{image}}" width="300" height="300" alt="">
+        </th>
+        <th>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </th>
+    </tr>
+    {{/each}}
+</table>
+</div>
